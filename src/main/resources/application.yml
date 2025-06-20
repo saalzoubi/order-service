@@ -7,3 +7,19 @@ spring:
     config:
       fail-fast: true
       enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
+server:
+  port: 8084
+info:
+  app:
+    name: test
+    description: ${spring.application.description}
+    version: ${spring.application.version}
